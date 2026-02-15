@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = 'http://127.0.0.1:5000/predict'
+url = "https://sturdy-capybara-975rvrjrxvprc95wv-5000.app.github.dev/predict"
 
 test_data = {
     'pclass' : 1,
@@ -13,4 +13,7 @@ test_data = {
 
 responce = requests.post(url, json=test_data)
 
-print(f"Server Responce: {responce.json()}")
+print("Status Code:", responce.status_code)
+print("Raw Text Response:", responce.text)
+
+
